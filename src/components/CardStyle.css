@@ -1,0 +1,119 @@
+
+img{
+    width: 400px;
+    height: 400px;
+}
+h5{
+    margin-left:100px;
+    font-size: 1.5em;
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.pokemon-detail {
+    display: flex;
+    align-items: center;
+  }
+  
+  .display {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+  }
+  .display1 {
+    display: table-row;
+    justify-content: left;
+    margin-bottom: 20px;
+
+  }
+  
+  .details-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 10px
+
+  }
+  
+  .detail-column {
+    display: inline;
+    margin: 0 100px;
+  }
+  
+  .p {
+    margin-bottom: 10px;
+    display: inline;
+
+  }
+  
+  .label {
+    color:  lightgray;
+    font-weight: bold;
+   
+  }
+  
+  .value {
+    color: black; 
+  }
+  :root {
+    --button-border-type: #96a5e4; 
+    --button-background-type:#f0f5ff; ; 
+    --button-border-ability:  #6ac1c4; 
+    --button-background-ability:#e6fffa; 
+  }
+  
+  
+.ability{
+    border: 2px solid var(--button-border-ability);
+    color: var(--button-border-ability);
+    background-color: var(--button-background-ability);
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 12px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px; 
+}
+  
+  .type {
+
+    border: 2px solid var(--button-border-type);
+    color: var(--button-border-type);
+    background-color: var(--button-background-type);
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 12px; 
+    cursor: pointer;
+    margin-right: 10px; 
+  }
+.catch-div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+.back{
+    margin-right: 10px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 5px;
+    border-color: lightgray;
+    padding: 6px 14px;
+    cursor: pointer;
+    border-width: 1px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+}
+.catch{
+    margin-right: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    border-width: 0em;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+}

@@ -1,0 +1,79 @@
+.main {
+    display: flex;
+    height: 100vh; /* Full height to ensure the sidebar extends fully */
+  }
+  
+  .aside-panel {
+    width: 20%; /* Adjust the width as necessary */
+    background-color: #f8f9fa; /* Optional: Add a background color */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .content {
+    width: 80%; /* Adjust the width to complement the sidebar width */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+
+  }
+  
+  
+  .nav-container .nav {
+    background-color: pink;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for each list item */
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+}

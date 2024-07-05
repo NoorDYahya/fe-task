@@ -1,0 +1,21 @@
+.aside-panel {
+    width: 100%;
+   background-color: #f8f8f8;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .aside-panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .aside-panel ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .aside-panel ul li:hover {
+    background-color: #e6e6e6;
+  }
+  
