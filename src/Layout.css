@@ -1,13 +1,63 @@
+/* Layout.css */
+
 .main {
     display: flex;
-    height: 100vh; /* Full height to ensure the sidebar extends fully */
+    flex-direction: column; /* Ensure the sticky nav is above the sidebar and content */
   }
+  
+  .sticky-nav-container {
+    width: 100%; /* Full width of the viewport */
+    background-color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
+    position: sticky;
+    padding: 1rem 0; /* Padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
+    height: 40px;
+    margin-top: 0;
+    padding-top: 0;
+  } 
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+  }
+  nav ul h3{
+    padding-left: 0;
+    padding-right: 1000px;
+  }
+ 
+  nav ul li {
+    margin-left: 2rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333; /* Dark text color */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid transparent; /* Add border for hover effect */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  nav ul li a:hover {
+    color: #f7b500; 
+    border-radius: 4px; /* Rounded corners */
+  }
+  
   
   .aside-panel {
     width: 20%; /* Adjust the width as necessary */
     background-color: #f8f9fa; /* Optional: Add a background color */
     padding: 20px;
     box-sizing: border-box;
+    border-right: 1px solid #ddd; /* Add a right border for separation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
   }
   
   .content {
@@ -15,65 +65,31 @@
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto; /* Allow scrolling if content overflows */
-
+    border-left: 1px solid #ddd; /* Add a left border for separation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
   }
   
-  
-  .nav-container .nav {
-    background-color: pink;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   }
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Styling for each list item */
-nav ul li {
-    margin-left: 2rem;
-}
-nav ul li a {
-    text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    font-size: 1rem;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    color: #fff;
-    border-radius: 4px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
+  
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
+  
     nav ul li {
-        width: 100%;
-        margin-left: 0;
+      width: 100%;
+      margin-left: 0;
     }
-
+  
     nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 1rem;
+      display: block;
+      width: 100%;
+      padding: 1rem;
     }
-}
+  }
+  

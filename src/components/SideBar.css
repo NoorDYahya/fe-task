@@ -1,21 +1,69 @@
+/* SideBar.css */
+
+/* Ensure .main container is a flex container */
+.main {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
 .aside-panel {
-    width: 100%;
-   background-color: #f8f8f8;
-    padding: 20px;
-    box-sizing: border-box;
-  }
+  width: 280px; /* Fixed width for the sidebar */
+  background-color: #f8f8f8;
+  /* padding: 20px; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure sidebar fills parent container height */
+
+}
+
+.aside-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
   
-  .aside-panel ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .aside-panel ul li {
-    margin-bottom: 10px;
+}
+
+.aside-panel ul li {
+  width: 50%; 
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px; 
+
+ 
+}
+
+.aside-panel ul li:hover {
+  cursor: pointer;
+}
+.remove-button {
+    border: 2px solid #c82333;
+    color: #c82333;
+    background-color: white;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-size: 12px; 
     cursor: pointer;
+
+    margin-left: 6px;
+}
+
+.remove-button:hover {
+  /* background-color: #c82333; */
+}
+
+.remove-button:focus {
+  outline: none;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aside-panel {
+    width: 100%; /* Full width on smaller screens */
   }
-  
-  .aside-panel ul li:hover {
-    background-color: #e6e6e6;
+
+  .aside-panel ul li {
+    width: 100%; /* Each card takes full width on smaller screens */
   }
-  
+}

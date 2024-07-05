@@ -4,7 +4,7 @@ img{
     height: 400px;
 }
 h5{
-    margin-left:100px;
+    margin-left:0px;
     font-size: 1.5em;
     color: black;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -39,7 +39,9 @@ h5{
   
   .detail-column {
     display: inline;
-    margin: 0 100px;
+    /* margin: 0 100px; */
+    margin-top: 0;
+    padding-right: 50px;
   }
   
   .p {
@@ -51,6 +53,7 @@ h5{
   .label {
     color:  lightgray;
     font-weight: bold;
+    padding-right: 10px;
    
   }
   
@@ -87,6 +90,7 @@ h5{
     font-size: 12px; 
     cursor: pointer;
     margin-right: 10px; 
+    
   }
 .catch-div{
     margin-top: 20px;
