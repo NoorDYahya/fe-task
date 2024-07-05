@@ -11,6 +11,7 @@ function PokemonDetails() {
   const pokemon = location.state?.pokemon;
 
   const [caught, setCaught] = useState(false);
+  const [caughtPokemon, setCaughtPokemon] = useState([]);
 
   if (!pokemon) {
     return <div>Cant reach pokemon data</div>;
@@ -25,23 +26,26 @@ function PokemonDetails() {
       if (success) {
        
         const caughtPokemonData = JSON.parse(localStorage.getItem('caughtedPokemon')) || [];
+        
         if (!caughtPokemonData.find(p => p.id === pokemon.id)) {
           caughtPokemonData.push(pokemon);
           localStorage.setItem('caughtedPokemon', JSON.stringify(caughtPokemonData));
-
+          setCaughtPokemon(caughtPokemonData);
           setCaught(true); // Mark as caught
-        }d
+        }
       } else {
       
         console.log('Failed to catch the Pokemon!');
+
       }
   };
+
   const Catch = () => {
     return new Promise(resolve => {
       setTimeout(() => {
         const success = Math.random() < 0.5; 
         resolve(success);
-      }, 1000); 
+      }, 100); 
     });
   };
   return (
@@ -100,7 +104,7 @@ function PokemonDetails() {
       </div>
       <div className="catch-div">
         <button type="button"className="back" onClick={() => navigate(-1)}>Back to List</button>
-        <button type="button"className="catch" onClick={attemptCatch}disabled={caught}>{caught ? 'Pokemon Caught!' : 'Catch!'}</button>
+        <button type="button"className="catch" onClick={() =>attemptCatch()}disabled={caught}>{caught ? 'Pokemon Caught!' : 'Catch!'}</button>
       </div>
 
 

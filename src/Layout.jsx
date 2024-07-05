@@ -3,6 +3,7 @@ import FavoritesSideBar from "./components/FavoritesSideBar";
 import './Layout.css';
 
 const Layout = () => {
+
   return (
     <div className="main">
       <div className="sticky-nav-container">

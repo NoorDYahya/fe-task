@@ -4,8 +4,9 @@ import '../components/SideBar.css';
 import PokemonCard from './PokemonCard';
 import { useNavigate } from 'react-router-dom';
 function FavoritesSideBar() {
-  const [caughtPokemon, setCaughtPokemon] = useState([]);
+
   const navigate = useNavigate();
+  const [caughtPokemon, setCaughtPokemon] = useState([]);
 
   const handleOnClick = (pokemon) =>{
     
@@ -16,11 +17,13 @@ function FavoritesSideBar() {
     const caughtPokemonData = JSON.parse(localStorage.getItem('caughtedPokemon')) || [];
     setCaughtPokemon(caughtPokemonData);
   }, []);
+
   const handleRemovePokemon = (id) => {
     const updatedCaughtPokemon = caughtPokemon.filter(pokemon => pokemon.id !== id);
     setCaughtPokemon(updatedCaughtPokemon);
     localStorage.setItem('caughtedPokemon', JSON.stringify(updatedCaughtPokemon));
   };
+
   return (
 
     <aside className="aside-panel">
