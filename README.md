@@ -18,3 +18,4 @@ features:
 -navbar
 -Remove button
 -search by name
+<img width="1440" alt="Screenshot 2024-07-06 at 17 32 21" src="https://github.com/NoorDYahya/fe-task/assets/94821780/5e63eed9-5bb1-4745-a790-beb10a9406fc">
