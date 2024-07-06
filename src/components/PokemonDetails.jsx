@@ -1,8 +1,10 @@
 
+
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { addCaughtPokemon } from '../components/authSlice'; // Adjust the path as necessary
+import { addCaughtPokemon } from '../components/authSlice'; 
+import { addFavorite } from '../services/favorites.service'; 
 import '../components/PokemonDetails.css';
 
 function PokemonDetails() {
@@ -12,12 +14,12 @@ function PokemonDetails() {
 
   const pokemon = location.state?.pokemon;
   const caughtPokemon = useSelector(state => state.auth.caughtPokemon);
+  const Name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
   if (!pokemon) {
-    return <div>Cant reach pokemon data</div>;
+    return <div>Can't reach pokemon data</div>;
   }
 
-  const Name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
   const attemptCatch = async () => {
     const success = await Catch();
@@ -25,6 +27,7 @@ function PokemonDetails() {
     if (success) {
       if (!caughtPokemon.find(p => p.id === pokemon.id)) {
         dispatch(addCaughtPokemon(pokemon)); // Dispatch action to add caught Pokemon to Redux
+        await addFavorite(pokemon); // Add caught Pokemon to favorites
       }
     } else {
       console.log('Failed to catch the Pokemon!');
@@ -94,7 +97,7 @@ function PokemonDetails() {
         </div>
       </div>
       <div className="catch-div">
-        <button type="button" className="back" onClick={() => navigate(-1)}>
+        <button type="button" className="back" onClick={() => navigate(`/pokemons`)}>
           Back to List
         </button>
         <button type="button" className="catch" onClick={attemptCatch} disabled={caughtPokemon.some(p => p.id === pokemon.id)}>
@@ -106,8 +109,6 @@ function PokemonDetails() {
 }
 
 export default PokemonDetails;
-
-
 
 
 
