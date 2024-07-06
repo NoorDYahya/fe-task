@@ -1,19 +1,19 @@
 /* SideBar.css */
 
-/* Ensure .main container is a flex container */
+
 .main {
   display: flex;
   height: 100vh; /* Full viewport height */
 }
 
 .aside-panel {
-  width: 280px; /* Fixed width for the sidebar */
+  width: 280px; 
   background-color: #f8f8f8;
-  /* padding: 20px; */
+
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure sidebar fills parent container height */
+  height: 100%; 
 
 }
 
@@ -50,20 +50,18 @@
     margin-left: 6px;
 }
 
-.remove-button:hover {
-  /* background-color: #c82333; */
-}
+
 
 .remove-button:focus {
   outline: none;
 }
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .aside-panel {
     width: 100%; /* Full width on smaller screens */
   }
 
   .aside-panel ul li {
-    width: 100%; /* Each card takes full width on smaller screens */
+    width: 100%;
   }
 }

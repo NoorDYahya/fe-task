@@ -23,18 +23,13 @@
   .pokemon-img {
     width: 70px;
     height: 70px;
-    /* margin-bottom: 10px; */
+
   }
   
   .content1{
     font-size: 0.7em;
   }
   
-  /* .pokemon-name {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 10px 0;
-  } */
   
   .pokemon-num {
     color: #666;
@@ -46,7 +41,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* gap: 3px; */
+
   }
   
   /* App Styles */
