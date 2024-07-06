@@ -2,15 +2,15 @@
 
 .main {
     display: flex;
-    flex-direction: column; /* Ensure the sticky nav is above the sidebar and content */
+    flex-direction: column; 
   }
   
   .sticky-nav-container {
-    width: 100%; /* Full width of the viewport */
+    width: 100%; 
     background-color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
     position: sticky;
-    padding: 1rem 0; /* Padding for spacing */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
+    padding: 1rem 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 40px;
     margin-top: 0;
     padding-top: 0;
@@ -38,26 +38,26 @@
     text-decoration: none;
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
-    color: #333; /* Dark text color */
+    color: #333; 
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid transparent; /* Add border for hover effect */
-    border-radius: 4px; /* Rounded corners */
+    border: 1px solid transparent; 
+    border-radius: 4px; 
   }
   
   nav ul li a:hover {
     color: #f7b500; 
-    border-radius: 4px; /* Rounded corners */
+    border-radius: 4px; 
   }
   
   
   .aside-panel {
-    width: 20%; /* Adjust the width as necessary */
-    background-color: #f8f9fa; /* Optional: Add a background color */
+    width: 20%;
+    background-color: #f8f9fa; 
     padding: 20px;
     box-sizing: border-box;
-    border-right: 1px solid #ddd; /* Add a right border for separation */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
+    border-right: 1px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
   
   .content {

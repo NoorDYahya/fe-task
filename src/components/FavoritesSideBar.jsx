@@ -28,7 +28,7 @@ function FavoritesSideBar() {
   );
 
   if (!caughtPokemon) {
-    return <div>Loading...</div>; // Handle initial loading state
+    return <div>Loading...</div>; 
   }
 
   return (
